@@ -1,0 +1,37 @@
+<img src="/logo.png" style="width: 120px" />
+
+<div id="topbar">
+  <a class="sel-menu-item" href="https://old.reddit.com/hot">hot</a>
+  <a class="menu-item" href="https://old.reddit.com/new">new</a>
+  <a class="menu-item" href="https://old.reddit.com/browse">browse</a>
+  <a class="menu-item" href="https://old.reddit.com/stats">stats</a>
+</div>
+
+<div id="infobar"> reddit is a source for what's new and popular online. reddit learns what you like as you vote on existing links or submit your own!</div>
+
+<% if @output %>
+  <% @output["data"].each_with_index do |entry, index| %>
+    <div class="item">
+      <div class="numbercol"><%= index + 1 %>.</div>
+      <div>
+        <a class="title" href="<%= entry['url'] %>"><%= raw entry['title'] %></a> <span class="little">(<%= entry['domain'] %>)</span>
+        <br />
+        <small>
+          <span class="little"><%= entry['score'] %> points posted <%= distance_of_time_in_words(entry['created_utc'], Time.now) %> ago  by <a class="bylink" href="https://old.reddit.com/u/<%= entry['author'] %>"><%= entry['author'] %></a></span>
+          <% if entry['num_comments'] > 0 %>
+            <a href="<%= entry['full_link'] %>"><%= entry['num_comments'] %> comments</a>
+          <% end %>
+        </small>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+
+<div id="footer">
+  <p class="menu">
+      <a href="https://sub.reddit.com/">subreddits</a> | <a href="https://old.reddit.com/feedback">feedback</a> | <a href="https://old.reddit.com/bookmarklets">bookmarklets</a> | <a href="https://old.reddit.com/.rss">rss</a> | <a href="https://old.reddit.com/buttons">buttons</a> | <a href="https://old.reddit.com/widget">widget</a> | <a href="https://store.reddit.com/index.html">store</a> | <a href="https://old.reddit.com/ad_inq">advertise</a>
+  </p>
+
+
+  <p class="bottommenu">Use of this site constitutes acceptance of our User Agreement and Privacy Policy. (c) <%= Date.today.year %> CondeNet, Inc. All rights reserved.</p>
+</div>

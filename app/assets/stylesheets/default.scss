@@ -1,0 +1,92 @@
+body {
+  font: normal small verdana, arial, helvetica, sans-serif;
+
+  a {
+    text-decoration: none;
+  }
+
+  #topbar {
+    margin: -24px 0px 5px 123px;
+    color: #c7def7;
+    padding: 2px 0 2px 0;
+    background-color: #c6def7;
+  
+    a {
+      padding: 2px 7px 2px 7px;
+      border-right: 2px solid white;
+    }
+  
+    .menu-item {
+      color: black;
+      background-color: #c6def7;
+    }
+  
+    .sel-menu-item {
+      color: white;
+      background-color: #336699;
+    }
+  }
+
+  #infobar {
+    background-color:  #ffff99;
+    margin-bottom: 0px;
+    padding: 5px 5px 5px 20px;
+  }
+  
+  .little {
+    font-size: x-small;
+    color: gray;
+  }
+  
+  .item {
+    padding: 3px 0 3px 5px;
+    & > div {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 1000px;
+    }
+
+    .numbercol {
+      font-size: medium;
+      text-align: right;
+      color: darkgray;
+      width: 40px;
+    }
+
+    .title {
+      font-size: medium;
+      color: blue;
+
+      &:visited {color: #551a8b}
+    }
+  
+    .bylink {
+      background-color: #f0f0f0;
+      color: #848484;
+      margin: 0px 1px 0px 2px;
+      padding: 0px 2px 0 2px;
+    }
+  }
+
+
+  #footer {
+    width: 100%;
+    text-align: center;
+    clear: both;
+    padding-top: 1em;
+
+    .bottommenu {
+      color: gray;
+      font-size: smaller;
+    }
+
+    .menu {
+      color: gray;
+
+      a {
+        color: #336699;
+        padding: 0 3px 0 3px;
+      }
+    }
+  }
+}
