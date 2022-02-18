@@ -1,5 +1,5 @@
 {
-  "name": "reddit",
+  "name": "reddit-time-machine",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
